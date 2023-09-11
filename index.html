@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Baby's Planet</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <!-- Important Owl stylesheet -->
+  <link rel="stylesheet" href="public/owl-carousel/owl.carousel.css">
+   
+  <!-- Default Theme -->
+  <link rel="stylesheet" href="public/owl-carousel/owl.theme.css">
+  <link rel="icon" type="image/x-icon" href="public/logo.png">
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  #owl-demo .item{
+  margin: 3px;
+}
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: whitesmoke;
+    color: #fff;
+    padding: 80px 2px 10px 2px ;
+    font-family: Montserrat, sans-serif;
+  }
+  .jumbotron2 {
+    background-color: white;
+    color: #fff;
+    padding: 80px 2px 10px 2px ;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+    height: 450px;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2px;
+    display: block;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+ 
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <img src="public/logo.png" alt="" style="max-width: 75px;">
+
+      <a class="navbar-brand" href="#myPage"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#pricing">PRICING</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- <div class="jumbotron2 text-center">
+  <img src="logo.png" alt="">
+
+</div> -->
+<div class="jumbotron text-center" style="background-color: #6495ED">
+  <img src="public/logo.png" alt="" style="max-width: 200px;">
+
+  <!-- <h1>Company</h1>  -->
+  <!-- <img src="logo.png" alt=""> -->
+  <!-- <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Subscribe</button>
+      </div>
+    </div>
+  </form> -->
+  <div id="owl-demo" class="owl-carousel owl-theme">
+          
+    <div class="item"><img src="public/photo1.jpg" alt="Owl Image"></div>
+    <div class="item"><img src="public/photo2.jpg" alt="Owl Image"></div>
+    <div class="item"><img src="public/photo3.jpg" alt="Owl Image"></div>
+    <div class="item"><img src="public/photo4.jpg" alt="Owl Image"></div>
+    <div class="item"><img src="public/photo1.jpg" alt="Owl Image"></div>
+    <div class="item"><img src="public/photo2.jpg" alt="Owl Image"></div>
+    <div class="item"><img src="public/photo3.jpg" alt="Owl Image"></div>
+    <div class="item"><img src="public/photo4.jpg" alt="Owl Image"></div>
+   
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+        <h1>Baby’s Planet</h1>
+      <h2>Proposito</h2>
+<h4>Estamos enfocados en el desarrollo integral de los niños, educando en valores, emociones, conocimientos y creatividad. Ofrecemos un nuevo entorno que facilita el proceso de aprendizaje inicial de los niños. Un lugar donde jugar, relacionarse con otros niños, disfrutar de espacios y materiales especialmente pensados para ellos, actividades y propuestas educativas, claves para fomentar su desarrollo.
+    
+    La guardería Baby’s Planet apoya a los padres y familias para que puedan compartir las experiencias y el desarrollo de la educación de sus hijos, y puedan conciliar las actividades laborales con la vida familiar, apoyándose en la confianza entre nuestro equipo y los padres.
+    
+    La experiencia y vocación de nuestro equipo nos hace la familia Baby’s Planet.</h4>
+
+      <br><button class="btn btn-default btn-lg">Get in Touch</button>
+    </div>
+    <div class="col-sm-4">
+      <span class="logo slideanim"><img src="public/icons/playtime.png" alt=""></span>
+      <span class="logo slideanim"><img src="public/icons/baby.png" alt=""></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <span class="logo slideanim"><img src="public/icons/love-and-romance.png" alt="" width="300"></span>
+        </div>
+        <div class="col-sm-8">
+            <h2>Nuestros Valores</h2><br>
+            <h4><strong>Misión:</strong> El objetivo de Baby’s Planet es ofrecer una atención personalizada con calidad,
+                eficiencia, calidez y amor, desarrollando al máximo las habilidades y destrezas de cada niño, integramos
+                un programa que satisfaga las necesidades intelectuales, morales, sociales y físicas de cada niño.</h4>
+            <h4><strong>Visión:</strong> Proveer un ambiente seguro, feliz y confiable que pueda proporcionar
+                tranquilidad y confianza a la comunidad y contribuir a mejorar la educación y formación de nuestros
+                infantes.</h4>
+            <h4><strong>Ventajas:</strong> Centro de estimulación temprana y Guardería para niños desde los 6 meses
+                hasta los 6 años Un espacio con la infraestructura acorde para el desarrollo integral de los niños Una
+                biblioteca con diferentes tipos de materiales pedagógicos, didácticos y lúdicos Un gran espacio al aire
+                libre donde podrá tener contacto con la naturaleza y recrearse en un parque diseñado para que puedan
+                desarrollar habilidades psicomotoras La posibilidad de socializar en grupos reducidos Servicio de
+                comedor de cocina propia Atención personalizada según las necesidades.</h4>
+            <div class="row slideanim">
+                <div class="col-sm-6">
+
+                    <h4>Valores:</h4>
+
+                    <ul class="list-inline">
+                        <li class="list-inline-item">• Compromiso</li>
+                        <li class="list-inline-item">• Confianza</li>
+                        <li class="list-inline-item">• Honestidad</li>
+                        <li class="list-inline-item">• Amor</li>
+                        <li class="list-inline-item">• Respeto</li>
+
+                        <!-- Add more list items as needed -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>NUESTROS SERVICIOS</h2>
+  <h4>Ofrecemos:</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-3">
+      <span class=" logo-small"><img src="public/icons/crib.png" alt=""></span>
+      <h4>GUARDERIA</h4>
+      <p>Guardería con programa de Estimulación para niños desde los 6 meses hasta los 2 años.
+        Estimulación de lenguaje
+        Motricidad fina y gruesa
+        Control de esfínteres
+        Control niño sano</p>
+    </div>
+    <div class="col-sm-3">
+        <span class=" logo-small"><img src="public/icons/delivery-bike.png" alt=""></span>
+
+      <h4>SERVICIO A DOMICILIO</h4>
+      <p>Ofrecemos el servicio de cuidado a domicilio, enfocado en las familias que necesitan salir y dejar sus niños en buenas manos.</p>
+    </div>
+    <div class="col-sm-3">
+        <span class=" logo-small"><img src="public/icons/happy-birthday.png" alt=""></span>
+
+      <h4>CUMPLEAÑOS Y EVENTOS</h4>
+      <p>Celebramos las fiestas infantiles y cumpleaños de los niños, con paquetes todo incluido, con los temas y decoraciones a elección de nuestros clientes.
+        Secciones de fotos (Organizamos los escenarios para las secciones de fotos y creación de álbum a elección de nuestros clientes)</p>
+    </div>
+    <div class="col-sm-3">
+        <span class=" logo-small"><img src="public/icons/storage-box.png" alt=""></span>
+
+        <h4>JUEGOS INFLABLES</h4>
+        <p>Tenemos una gran variedad de juegos inflables, adaptados a diferentes edades, con los mejores estándares de calidad del mercado, alquilamos para fiestas y cumpleaños y hacemos actividades abiertas al público para el disfrute de los niños.</p>
+      </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-3">
+        <span class=" logo-small"><img src="public/icons/languages.png" alt=""></span>
+
+      <h4>PREESCOLAR BILINGUE</h4>
+      <p>Colegio infantil bilingüe para niños de 3 a 6 años,
+        aprobado y reconocido por el ministerio de educación,
+        cumpliendo con los mejores estándares de calidad.</p>
+    </div>
+    <div class="col-sm-3">
+        <span class=" logo-small"><img src="public/icons/summer.png" alt=""></span>
+
+      <h4>MINI CLUB DE VACACIONES</h4>
+      <p>Espacio infantil abiertos a todos los padres que nos visitan,
+        nacional e internacional, que buscan un espacio preparado
+        para que sus niños socialicen , realicen actividades diversas
+        y aprendan el idioma español, estamos abiertos todo el año.</p>
+    </div>
+    <div class="col-sm-3">
+        <span class=" logo-small"><img src="public/icons/camp.png" alt=""></span>
+
+      <h4 style="color:#303030;">CAMPAMENTOS</h4>
+      <p>Ofrecemos los veranos más divertidos! Con diferentes propuestas de actividades cada año, pintura, deportes, manualidades, música y mucha diversión.</p>
+    </div>
+    <div class="col-sm-3">
+        <span class=" logo-small"><img src="public/icons/secondary.png" alt=""></span>
+
+        <h4 style="color:#303030;">AFTER SCHOOL</h4>
+        <p>Ofrecemos una extensión de cuidado y actividades recreativas en las tardes , incluyendo el servicio del transporte y el almuerzo, ahora con un play de béisbol mini cultural para los niños de 3 años en adelante.</p>
+      </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <h2 class="text-center">Nuestras habilidades -
+            Puntos Fuertes / Destacados</h2>
+        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+              <li data-target="#myCarousel" data-slide-to="4"></li>
+
+               <li data-target="#myCarousel" data-slide-to="5"></li>
+            </ol>
+        
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <h4><img src="public/icons/staff.png" alt=""><br><span>Personal Dedicado</span></h4>
+              </div>
+              <div class="item">
+                <h4><img src="public/icons/area-chart.png" alt=""><br><span>Amplia Area De Juegos</span></h4>
+              </div>
+              <div class="item">
+                <h4><img src="public/icons/nurse.png" alt=""><br><span>Enfermeria</span></h4>
+              </div>
+              <div class="item">
+                <h4><img src="public/icons/menu.png" alt=""><br><span>Almuerzo Casero</span></h4>
+              </div>
+              <div class="item">
+                <h4><img src="public/icons/cctv.png" alt=""><br><span>Camaras de Seguridad</span></h4>
+              </div>
+              <div class="item">
+                <h4><img src="public/icons/sensory.png" alt=""><br><span>Tablas Sensoriales</span></h4>
+              </div>
+            
+            </div>
+        
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+    </div>
+</div>
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Nuestro equipo</h2><br>
+  <h4>Conozca nuestro equipo</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="public/eva1.jpeg" alt="New York" width="400" height="300">
+        <p><strong>Eva Marque</strong></p>
+        <p>Gerente General / Fundadora</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="public/Yamila.jpeg" alt="New York" width="400" height="300">
+        <p><strong>Yalima Loyo</strong></p>
+        <p>Coordination and Accounting</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="public/teach10.jpeg" alt="San Francisco" width="400" height="300">
+        <p><strong>Emmanuelle Huberty</strong></p>
+        <p>French Teacher</p>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>What our customers say</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+      </div>
+      <div class="item">
+        <h4><img src="public/icons/books.png" alt=""><br><span>Biblioteca Infantil</span></h4>
+      </div>
+      <div class="item">
+        <h4><img src="public/icons/books.png" alt=""><br><span>Biblioteca Infantil</span></h4>
+      </div>
+      <div class="item">
+        <h4><img src="public/icons/books.png" alt=""><br><span>Biblioteca Infantil</span></h4>
+      </div>
+      <div class="item">
+        <h4><img src="public/icons/books.png" alt=""><br><span>Biblioteca Infantil</span></h4>
+      </div>
+      <div class="item">
+        <h4><img src="public/icons/books.png" alt=""><br><span>Biblioteca Infantil</span></h4>
+      </div>
+      <div class="item">
+        <h4><img src="public/icons/books.png" alt=""><br><span>Biblioteca Infantil</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Precios</h2>
+    <h4>Fórmulas diferentes</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Inscripcion</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong><img src="public/icons/check.png" alt=""></strong> 2 tshirt</p>
+          <p><strong><img src="public/icons/check.png" alt=""></strong> 1 kit didactico de estudio adaptado a su edad</p>
+          <p><strong><img src="public/icons/check.png" alt=""></strong> 1 delantal de pintura</p>
+          <p><strong><img src="public/icons/check.png" alt=""></strong> Lapices de colores, tijeras, pintura</p>
+          <p><strong><img src="public/icons/check.png" alt=""></strong> Y todo el material de tabajo</p>
+        </div>
+        <div class="panel-footer">
+          <h3>RD$ 8000 </h3>
+          <!-- <h4>per month</h4> -->
+          <!-- <button class="btn btn-lg">Sign Up</button> -->
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Jornada Completa</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong><img src="public/icons/check.png" alt=""></strong> 7.45 am - 5.45 pm</p>
+          <p><strong><img src="public/icons/check.png" alt=""></strong> 2 tshirt</p>
+
+          <p><strong><img src="public/icons/check.png" alt=""></strong> 1 kit didactico de estudio adaptado a su edad</p>
+          <p><strong><img src="public/icons/check.png" alt=""></strong> 1 delantal de pintura</p>
+          <p><strong><img src="public/icons/check.png" alt=""></strong> Lapices de colores, tijeras, pintura</p>
+          <p><strong><img src="public/icons/check.png" alt=""></strong> Y todo el material de tabajo</p>
+        </div>
+        <div class="panel-footer">
+          <h3>RD$ 10,000 </h3>
+          <h4>Mensual</h4>
+          <!-- <button class="btn btn-lg">Sign Up</button> -->
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Media jordana</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong><img src="public/icons/check.png" alt=""></strong> 7:45 am - 12:30 pm / 1:30 pm - 5:45 pm</p>
+          <p><strong><img src="public/icons/check.png" alt=""></strong> Almuerzo</p>
+          <p><strong><img src="public/icons/check.png" alt=""></strong> 2 tshirt</p>
+
+          <p><strong><img src="public/icons/check.png" alt=""></strong> 1 kit didactico de estudio adaptado a su edad</p>
+          <p><strong><img src="public/icons/check.png" alt=""></strong> 1 delantal de pintura</p>
+          <p><strong><img src="public/icons/check.png" alt=""></strong> Lapices de colores, tijeras, pintura</p>
+          <p><strong><img src="public/icons/check.png" alt=""></strong> Y todo el material de tabajo</p>
+        </div>
+        <div class="panel-footer">
+          <h3>RD$ 5000 - 6000</h3>
+          <h4>Mensual</h4>
+          <!-- <button class="btn btn-lg">Sign Up</button> -->
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">MAS INFO</h2>
+  <div class="row">
+    <div class="col-sm-5">
+        <h2 class="">CONTACTOS</h2>
+
+      <p><span class="glyphicon glyphicon-map-marker"></span> Las Terrenas, RD.</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Teléfono : +1 829 569 61 37</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> guarderiababysplanetlt@gmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<!-- <img src="map.png" class="" style=""> -->
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Anderson Marquez</p>
+</footer>
+
+
+    <script src="public/owl-carousel/owl.carousel.js"></script>
+      <script>
+$(document).ready(function() {
+ 
+ $("#owl-demo").owlCarousel({
+
+     autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+     items : 4,
+     itemsDesktop : [1199,3],
+     itemsDesktopSmall : [979,3]
+
+ });
+
+
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
