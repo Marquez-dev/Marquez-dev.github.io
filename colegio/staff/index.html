@@ -1,0 +1,299 @@
+<html>
+<head>
+
+    <title>Baby's Planet</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <!-- Important Owl stylesheet -->
+        <link rel="stylesheet" href="../public/owl-carousel/owl.carousel.css">
+      
+        <!-- Default Theme -->
+
+        <link rel="icon" type="image/x-icon" href="/public/logo.png">
+      
+        <link rel="stylesheet" href="../public/style.css">
+
+    
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: azure;
+}
+
+.container2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+
+.container2 .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    max-width: 100%;
+    height: 300px;
+    background: white;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.container2 .card:hover {
+    height: 400px;
+}
+
+.container2 .card .img-box {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container2 .card:hover .img-box {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.container2 .card .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container2 .card .content {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    height: 35px;
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container2 .card:hover .content {
+    top: 130px;
+    height: 250px;
+}
+
+.container2 .card .content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr);
+}
+
+.container2 .card .content p {
+    color: #333;
+}
+
+.container2 .card .content a {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    background: var(--clr);
+    color: white;
+    font-weight: 500;
+}
+
+.container2 .card .content a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+    .container2 .card {
+        width: 230px;
+        border-radius: 15px;
+    }
+
+    .container2 .card .img-box {
+        width: 185px;
+        border-radius: 10px;
+    }
+
+    .container2 .card .content p {
+        font-size: 0.8rem;
+    }
+
+    .container2 .card .content a {
+        font-size: 0.9rem;
+    }
+}
+</style>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <img src="/public/logo.png" alt="" style="max-width: 70px;">
+    
+            <a class="navbar-brand" href="#myPage"></a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/colegio/#about">NOSOTROS</a></li>
+              <li><a href="/colegio/#services">SERVICIOS</a></li>
+              <li><a href="/colegio/#portfolio">PORTAFOLIO</a></li>
+              <li><a href="/colegio/#pricing">PLANES</a></li>
+              <li><a href="/colegio/#contact">CONTACTO</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MAS <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/colegio/galeria">FOTOS</a></li>
+                  <li><a href="/colegio/planes">PLANES</a></li>
+                  <li><a href="/colegio/staff">EQUIPO</a></li>
+                  <!-- <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li> -->
+                </ul>
+              </li>
+    
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container2">
+ 
+
+        <div class="card" style="--clr: #009688">
+            <div class="img-box">
+                <img src="/public/eva1.jpeg">
+            </div>
+            <div class="content">
+                <h2>Eva Marque</h2>
+                <p>
+                    Soy la Gerente general del centro , fundadora de Babys Planet , Amo trabajar con los
+                        niños , me apasiona mucho crear espacios adaptados para la estimulación temprana de los niños ,mas de 6 años de experiencia en el cuidado infantil en las terrenas!
+                </p>
+                
+            </div>
+        </div>
+        <div class="card" style="--clr: #FF3E7F">
+            <div class="img-box">
+                <img src="/public/Yamila.jpeg">
+            </div>
+            <div class="content">
+                <h2>Yalima Loyo</h2>
+                <p style="font-size: small;">
+                    Hola, soy la Coordinadora y encargada de Contabilidad. Nací y me forme en Venezuela, este es mi segundo año en Baby’s Planet y disfruto cada minuto en el trabajo de enseñanza y aprendizaje de los niños. Coordino los programas de estimulación infantil. Soy maestra en Educación Integral, Profesora en Educación Integral, Profesora en la Especialidad de Educación Física y Máster en Ciencias en Actividad Física Comunitaria. 18 años de experiencia docente en Venezuela.
+                </p>
+                
+            </div>
+        </div>
+        <div class="card" style="--clr: #03A9F4">
+            <div class="img-box">
+                <img src="/public/teach10.jpeg">
+            </div>
+            <div class="content">
+                <h2>Emmanuelle Huberty</h2>
+                <p>
+                    Hola, Trabajo con los niños de 6 años en adelante como la Profesora de Francés, además trabajo con un Programa de Estudios a Distancia en Francés CNED,  y en el reforzamiento escolar de los niños de la escuela Francesa.
+                </p>
+                
+            </div>
+        </div>
+        <div class="card" style="--clr: #009688">
+            <div class="img-box">
+                <img src="/public/teach3.jpeg">
+            </div>
+            <div class="content">
+                <h2>Paula Crippa</h2>
+                <p>
+                    Hola, soy la instructora de Yoga y trabajo con los niños pequeños en el desarrollo del Programa de Estimulación del Lenguaje y de Motricidad Gruesa.
+                </p>
+                
+            </div>
+        </div>
+        <div class="card" style="--clr: #009688">
+            <div class="img-box">
+                <img src="/public/teach11.jpeg">
+            </div>
+            <div class="content">
+                <h2>Patria Henriquez</h2>
+                <p>
+                    Hola soy Rosaura, este es mi cuarto año en Baby’s Planet, trabajo con los niños en el desarrollo del programa de estimulación infantil y el desarrollo de la motricidad fina, me encanta trabajar con ellos.
+                </p>
+                
+            </div>
+        </div>
+        <div class="card" style="--clr: #009688">
+            <div class="img-box">
+                <img src="/public/teach4.jpeg">
+            </div>
+            <div class="content">
+                <h2>Johanna Henriquez</h2>
+                <p>
+                    Hola soy Johanna, es mi cuarto año en Baby’s Planet, inicié con Tía Eva en este proyecto, amo trabajar con los niños, me encanta verlos desarrollarse y crecer. Hice estudios de  Técnico en Enfermería, soy la Enfermera del Centro y la asistente de Pediatría.
+                </p>
+            </div>
+        </div>
+        <div class="card" style="--clr: #009688">
+            <div class="img-box">
+                <img src="/public/tiajennifer.jpg">
+            </div>
+            <div class="content">
+                <h2>Tía Yenifer</h2>
+                <p style="font-size: small;">
+                    Hola soy Tía Yenifer, estoy en el Centro como Psicóloga y Ayudante del Grupo. Como psicóloga me gusta observar a los niños y niñas en su rutina diaria para ayudarles en caso de presentar una situación particular. Trabajo con los niños de manera individual y grupal como Ayudante del Grupo II
+                </p>
+            </div>
+        </div>
+        <div class="card" style="--clr: #009688">
+            <div class="img-box">
+                <img src="/public/coplin.jpg">
+            </div>
+            <div class="content">
+                <h2 >Maestra Coplin</h2>
+                <p style="font-size: small;">
+                    Hola soy la Maestra Coplin. Licenciada en Educación Inicial. Tengo varios años de experiencia trabajando como docente en educación inicial. Me gusta trabajar con los niños y niñas enseñándoles para que aprender de manera divertida las letras y los números. Trabajo con el Grupo III.
+                </p>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
