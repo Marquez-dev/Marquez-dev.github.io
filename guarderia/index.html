@@ -28,19 +28,36 @@
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
   <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+    <div class="containe">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+        <style>
+          #titulo {
+   font-size: medium;
+ }
+         @media (max-width: 768px) {
+ #titulo {
+   font-size: small;
+ }
+}
+@media (max-width: 1120px) {
+ #titulo {
+   font-size: smaller;
+ }
+}
+       </style>
         <img src="public/logo.png" alt="" style="max-width: 70px;">
-        <span style="color: black; font-weight: bolder; font-size: medium;">Guarderia Baby's Planet</span>
+        <span style="color: black; font-weight: bolder;" id="titulo">Guarderia Baby's Planet</span>
         <a class="navbar-brand" href="#myPage"></a>
       </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
+      <div class="collapse navbar-collapse" style="margin-right: 2%;" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">INICIO</a></li>
+
           <li><a href="#about">NOSOTROS</a></li>
           <li><a href="#services">SERVICIOS</a></li>
           <li><a href="#portfolio">PORTAFOLIO</a></li>
